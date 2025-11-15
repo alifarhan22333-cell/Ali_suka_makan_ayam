@@ -1,0 +1,115 @@
+/* --- Variabel Global --- */
+:root {
+    --warna-utama: #ff6600;
+    --warna-teks: #333;
+    --latar-terang: #f9f9f9;
+    --latar-putih: #ffffff;
+    --bayangan: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Pengaturan Dasar --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--latar-terang);
+    color: var(--warna-teks);
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--warna-utama);
+    color: var(--latar-putih);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* --- Navigasi Filter --- */
+#filter-kategori {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--latar-putih);
+    border-bottom: 2px solid #eee;
+}
+
+.btn-filter {
+    padding: 0.6rem 1.2rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--warna-utama);
+    background-color: var(--latar-putih);
+    color: var(--warna-utama);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover, .btn-filter.aktif {
+    background-color: var(--warna-utama);
+    color: var(--latar-putih);
+}
+
+/* --- Kontainer Resep (Grid) --- */
+#kontainer-resep {
+    display: grid;
+    /* Membuat kolom responsif: minimal 300px, 1fr mengisi sisanya */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Kartu Resep --- */
+.kartu-resep {
+    background-color: var(--latar-putih);
+    border-radius: 10px;
+    box-shadow: var(--bayangan);
+    overflow: hidden; /* Agar gambar tidak keluar dari radius */
+    transition: transform 0.2s;
+}
+
+.kartu-resep:hover {
+    transform: translateY(-5px);
+}
+
+.kartu-resep img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Memastikan gambar terpotong rapi */
+}
+
+.kartu-resep .info-resep {
+    padding: 1.5rem;
+}
+
+.kartu-resep h3 {
+    margin-top: 0;
+    color: var(--warna-utama);
+}
+
+.kartu-resep .kategori {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+
